@@ -4,10 +4,8 @@ author: 旺旺
 date: 2020-09-15 21:30:00 +0800
 categories: [Java, Concurrent]
 tags: [Java, Concurrent, volatile]
-pin: true
 ---
 
-### first
 最近学习了volatile的实现原理，有一些心得体会，写这篇文章记录一下。
 
 将会从以下几个方面去描述volatile的技术内幕:
@@ -19,7 +17,7 @@ pin: true
 ### 功能特性与使用场景
 
 #### 保证数据可见性
-在多线程环境下，多个线程共享某个被volatile修饰的数据。当其中一个线程修改了这个数据之后，其他线程将能实时获取到该数据的最新值。
+在多线程环境下，多个线程共享某个volatile修饰的数据。当其中一个线程修改了这个数据之后，其他线程将能实时获取到该数据的最新值。
 
 为什么当一个线程修改了volatile修饰的数据之后，其他线程能实时获取到该数据的最新值呢？可以通过下面这张图得出答案。
 
@@ -76,7 +74,7 @@ public class VolatileBanOutOfOrder {
 ```
 
 ### 字节码层面分析
-在下图中，左边部分为java源代码，右边为编译后的字节码信息。从字节码信息中可以看出，该类有一个属性b，重点看属性b描述信息中Access flags这个信息，它记录了属性b被0x0040和volatile修饰。其实说白了就是在字节码层面有一个volatile去放在属性b的Access flags中就OK了。想了解真正的实现细节，还是要看JVM层面和硬件层面的分析。
+在下图中，左边部分为java源代码，右边为编译后的字节码信息。从字节码信息中可以看出，该类有一个属性b，重点看属性b描述信息中Access flags这个信息，它记录了属性b被volatile修饰。其实说白了就是在字节码层面有一个volatile去放在属性b的Access flags中就OK了。想了解真正的实现细节，还是要看JVM层面和硬件层面的分析。
 
 ![volatile](http://www.giver.vip/article_image/volatile.png)
 
@@ -140,5 +138,5 @@ LoadStoreBarrier
 
 说到这里，volatile的原理就算分析完了。最后还得提醒一个很容易犯错误的地方: volatile能保证多线程环境中的数据可见性，但无法保证线程安全。许多同学把这两个概念混淆了，甚至认为volatile和synchronized是差不多一样的东西，要纠正一下这个错误认知。
 
-如果本文章有什么错误的地方，欢迎大家批评指正～
+本人菜鸟一枚，水平有限，如果文章有什么错误的地方，欢迎批评指正～
 
