@@ -2,8 +2,8 @@
 title: 证明CPU乱序执行的一种简单方式
 author: 旺旺
 date: 2020-09-30 22:07:00 +0800
-categories: [Hardware, CPU]
-tags: [Hardware, CPU, ExecOutOfOrder]
+categories: [CS, CPU]
+tags: [CS, CPU]
 ---
 
 上一篇文章分享了volatile的实现原理，其中提到了CPU的乱序执行，这篇文章来分享一下CPU乱序执行的一种最简单证明。

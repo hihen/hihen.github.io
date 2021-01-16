@@ -2,8 +2,8 @@
 title: 计算机系统为什么要内存对齐？
 author: 旺旺
 date: 2020-12-13 18:08:00 +0800
-categories: [Hardware, Memory]
-tags: [Hardware, Memory, CPU]
+categories: [CS, Memory]
+tags: [CS, Memory, CPU]
 ---
 
 有时候会遇到同学们在问：“我打印出来的Java对象大小为什么总是24bytes，32bytes，40bytes，为什么不能是25bytes，26bytes，27bytes呢？除此之外，我发现它们都是8的倍数唉，好奇怪！“。为了让这些同学不再疑惑，于是我决定写下这篇文章。

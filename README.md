@@ -1,5 +1,10 @@
 # Chirpy
 
+```jvm
+ bash tools/build.sh -d html
+ scp -P 2222 -r html  hihen@59.110.163.232:/var/www/
+```
+
 🌏 English • [简体中文](docs/README_zh-CN.md)
 
 [![Build Status](https://github.com/cotes2020/jekyll-theme-chirpy/workflows/build/badge.svg?branch=master&event=push)](https://github.com/cotes2020/jekyll-theme-chirpy/actions?query=branch%3Amaster+event%3Apush)

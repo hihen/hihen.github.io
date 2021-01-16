@@ -2,8 +2,8 @@
 title: volatile实现原理
 author: 旺旺
 date: 2020-09-15 21:30:00 +0800
-categories: [Java, Concurrent]
-tags: [Java, Concurrent, volatile]
+categories: [Java, JVM]
+tags: [Java, JVM, volatile]
 ---
 
 最近学习了volatile的实现原理，有一些心得体会，写这篇文章记录一下。

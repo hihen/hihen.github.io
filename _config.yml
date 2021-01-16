@@ -8,9 +8,9 @@
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 #--------------------------
 
-title: hihenzhang's technology blog                        # the main title
+title: wangwang's technology blog                        # the main title
 
-tagline: record and share some technical learning achievements, such as Algorithm, JVM, Linux, Network...  # it will display as the sub-title
+tagline: share some technical learning achievements, such as CS, Java, Linux, Network...  # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   A minimal, portfolio, sidebar,
@@ -20,18 +20,18 @@ description: >-                        # used by seo meta and the atom feed
 # Replace with the website url, e.g. 'https://username.github.io'
 url: 'https://hihen.github.io'
 
-author: hihen                  # change to your full name
+author: wangwang                  # change to your full name
 
-avatar: /assets/img/sample/wall.e.sky.jpeg   # support internet resources
+avatar: /assets/img/sample/avatar.jpg   # support internet resources
 
 github:
-  username: hihen             # change to your github username
+  username: wangwang             # change to your github username
 
 twitter:
-  username: hihen            # change to your twitter username
+  username: wangwang            # change to your twitter username
 
 social:
-  name: hihen                  # it will shows as the copyright owner in Footer
+  name: wangwang                  # it will shows as the copyright owner in Footer
   email: hihenzhang@gmail.com             # change to your email address
   links:
     # The first element serves as the copyright owner's link
