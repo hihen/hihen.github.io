@@ -132,10 +132,10 @@ final boolean nonfairTryAcquire(int var1) {
             return true;
         }
     } 
-    // lock已经被线程霸占了，检查一下是不是自己人，如果是的话，那当当前线程就是锁二代了，state加1
+    // lock已经被线程霸占了，检查一下是不是自己人，如果是的话，那当前线程就是锁二代了，state加1
     else if (var2 == this.getExclusiveOwnerThread()) {
         int var4 = var3 + var1;
-        // 锁重入的次数不能超过Ingteger.MAX_VALUE，不然会蹦
+        // 锁重入的次数不能超过Ingteger.MAX_VALUE，不然会爆炸
         if (var4 < 0) {
             throw new Error("Maximum lock count exceeded");
         }
@@ -200,11 +200,11 @@ private Node enq(Node var1) {
 
 用上了while(true)，保证了enq()返回后，当前线程一定是被加入到了锁队列的末尾。
 
-当前线程对应的Node加如队列末尾之后，接着调用了acquireQueued()，我们来看下这个方法干了什么事。
+当前线程对应的Node加入队列末尾之后，接着调用了acquireQueued()，我们来看下这个方法干了什么事。
 
 ```java
 final boolean acquireQueued(Node var1, int var2) {
-    // 标识该方法返回时，当前线程有没有获得锁，默认值true代表没有抢到
+    // 标识该方法返回时，当前线程是否已获得锁，默认值true代表没有抢到
     boolean var3 = true;
 
     try {
